@@ -2,15 +2,15 @@ version: '3'
 
 services:
   minecraft_server:
-    image: itzg/minecraft-server:java8-multiarch
+    image: itzg/minecraft-server:java8
     container_name: mc
     environment:
-       TYPE: "PAPER"
+       TYPE: Paper
        SPIGET_RESOURCES: "34315,3836"
        EULA: "TRUE"
-       VERSION: "1.8.9"
+       VERSION: "1.8.8"
     volumes:
-       - data:/data
+       - PATH/TO/SMB/SHARE:/data
     ports:
       - 25565:25565
     restart: always
